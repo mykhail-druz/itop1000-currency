@@ -12,7 +12,9 @@ function CurrencyInput(props) {
       <select
         className="h-10 rounded-r-md bg-stone-200"
         value={props.currency}
-        onChange={(ev) => props.onCurrencyChange(ev.target.value)}
+        onChange={(ev) => {
+          props.onCurrencyChange(ev.target.value);
+        }}
       >
         {props.currencies.map((currency, index) => (
           <option key={index} value={currency}>
